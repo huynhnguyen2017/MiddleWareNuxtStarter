@@ -32,6 +32,10 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
+    // Nuxt 2 only:
+    // https://composition-api.nuxtjs.org/getting-started/setup#quick-start
+    '@nuxtjs/composition-api/module',
+    '@pinia/nuxt',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -44,7 +48,4 @@ export default {
   build: {
   },
 
-  serverMiddleware: [
-    { path: '/', handler: '~/server-middleware/apiURL.js' }
-  ]
 }
